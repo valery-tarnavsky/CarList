@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Table</title>
+<!--<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.css" />-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="tableWrap">
+        <div class="checkedTooltip text-center fade-in hidden">
+            <span class="checkedCount"></span>items are selected
+            <a data-event="removeAll" class="removeAll" href="#">remove all</a>
+        </div>
+        <div class="emptyMsg">
+            <p>No data in the table</p>
+        </div>
+        <table class="table carListTable table-striped">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">#</th>
+                <th scope="col">Vendor</th>
+                <th scope="col">Model</th>
+                <th scope="col">Year</th>
+                <th scope="col">Color</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <button type="button" id="add" class="btn btn-dark btn-sm ">Add new</button>
+        </div>
+    </div><!--/tableWrap-->
+    <div class="modalWrap fade-in hidden">
+        <div class="modalTitle"></div>
+        <form class="carForm">
+            <div class="form-group">
+                <label for="vendor">Vendor <span>*</span></label>
+                <input type="text" id="vendor" class="form-control form-control-sm todo-form-input" placeholder="Dodge">
+            </div>
+            <div class="form-group">
+                <label for="model">Model  <span>*</span></label>
+                <input type="text" id="model" class="form-control form-control-sm todo-form-input" placeholder="Charger">
+            </div>
+            <div class="form-group">
+                <label for="year">Year  <span>*</span></label>
+                <input type="text" id="year" class="form-control form-control-sm todo-form-input" placeholder="2018">
+            </div>
+            <div class="form-group">
+                <label for="color">Color  <span>*</span></label>
+                <select id="color" class="form-control todo-form-select">
+                    <option>Red</option>
+                    <option>Black</option>
+                    <option>Silver</option>
+                    <option>Blue</option>
+                    <option>Turquoise</option>
+                    <option>Purple</option>
+                    <option>Pink</option>
+                    <option>Violet</option>
+                    <option>Aquamarine</option>
+                    <option>Mauv</option>
+                </select>
+            </div>
+            <div class="modalFooter text-center"></div>
+        </form>
+    </div>
+    <div class="notify"></div>
+</div>
+
+
+
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<!--
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->
+
+<script src="js/helpers.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
